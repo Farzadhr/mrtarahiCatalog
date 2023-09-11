@@ -244,52 +244,52 @@
             </div>
             <div class="gifcon" id="i2">
                 <div class="gifdiv">
-                    <img src="gifs/page-2.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i3">
                 <div class="gifdiv">
-                    <img src="gifs/page-3.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i4">
                 <div class="gifdiv">
-                    <img src="gifs/page-4.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i5">
                 <div class="gifdiv">
-                    <img src="gifs/page-5.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i6">
                 <div class="gifdiv">
-                    <img src="gifs/page-6.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i7">
                 <div class="gifdiv">
-                    <img src="gifs/page-7.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i8">
                 <div class="gifdiv">
-                    <img src="gifs/page-8.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i9">
                 <div class="gifdiv">
-                    <img src="gifs/page-9.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i10">
                 <div class="gifdiv">
-                    <img src="gifs/page-10.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
             <div class="gifcon" id="i11">
                 <div class="gifdiv">
-                    <img src="gifs/page-11.gif" alt="" class="gif">
+                    <img src="" alt="" class="gif">
                 </div>
             </div>
         </div>
@@ -319,9 +319,12 @@
     var pagetext = document.getElementById("page-num-header")
     var currentgif = 1
     var totalgif = gifcon.length
+    var gifurl = ["gifs/page-2.gif", "gifs/page-3.gif", "gifs/page-4.gif", "gifs/page-5.gif", "gifs/page-6.gif", "gifs/page-7.gif", "gifs/page-8.gif", "gifs/page-9.gif", "gifs/page-10.gif", "gifs/page-11.gif"]
     showgif(currentgif)
 
-
+    document.querySelector("#i1 .gif").addEventListener("load",function(){
+        alert("hi")
+    })
     for (var i = 0; i < btnnext.length; i++) {
         btnnext[i].addEventListener("click", function () {
             currentgif += 1

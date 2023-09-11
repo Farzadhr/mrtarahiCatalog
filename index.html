@@ -17,7 +17,8 @@
         }
 
         body,
-        p ,i{
+        p,
+        i {
             margin: 0;
             padding: 0;
         }
@@ -157,6 +158,18 @@
             color: black;
         }
 
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+        }
+
         @media only screen and (min-width:350px) and (max-width:740px) {
             .link-container {
                 position: static;
@@ -165,6 +178,7 @@
                 align-items: center;
                 flex-direction: column;
             }
+
             .slide-container .next-div,
             .slide-container .prev-div {
                 display: none;
@@ -198,7 +212,8 @@
                 height: 18px;
             }
         }
-        @media only screen and (min-width:740px) and (max-width:992px){
+
+        @media only screen and (min-width:740px) and (max-width:992px) {
             .link-container {
                 position: static;
                 display: flex;
@@ -206,7 +221,8 @@
                 align-items: center;
                 flex-direction: row;
             }
-            .link{
+
+            .link {
                 margin: 0 8px;
             }
         }
@@ -292,6 +308,26 @@
                     <img src="" alt="" class="gif">
                 </div>
             </div>
+            <div class="gifcon" id="i12">
+                <div class="gifdiv">
+                    <img src="" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i13">
+                <div class="gifdiv">
+                    <img src="" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i14">
+                <div class="gifdiv">
+                    <img src="" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i15">
+                <div class="gifdiv">
+                    <img src="" alt="" class="gif">
+                </div>
+            </div>
         </div>
         <div class="prev-div">
             <i class="bi bi-chevron-left btn-prev"></i>
@@ -311,6 +347,9 @@
             اینستاگرام ما
         </a>
     </div>
+    <div class="loading">
+        <img src="gifs/Spinner-2.gif" alt="">
+    </div>
 </body>
 <script>
     var btnnext = document.querySelectorAll(".btn-next")
@@ -319,14 +358,57 @@
     var pagetext = document.getElementById("page-num-header")
     var currentgif = 1
     var totalgif = gifcon.length
-    var gifurl = ["gifs/page-2.gif", "gifs/page-3.gif", "gifs/page-4.gif", "gifs/page-5.gif", "gifs/page-6.gif", "gifs/page-7.gif", "gifs/page-8.gif", "gifs/page-9.gif", "gifs/page-10.gif", "gifs/page-11.gif"]
-    showgif(currentgif)
+    var gifurl = ["gifs/page-2.gif", "gifs/page-3.gif", "gifs/page-4.gif", "gifs/page-5.gif", "gifs/page-6.gif", "gifs/page-7.gif", "gifs/page-8.gif", "gifs/page-9.gif", "gifs/page-10.gif", "gifs/page-11.gif", "gifs/page-12.gif", "gifs/page-13.gif", "gifs/page-14.gif", "gifs/page-15.gif"]
 
-    document.querySelector("#i1 .gif").addEventListener("load",function(){
+    for (var i of gifcon) {
+        i.style.display = "none"
+    }
+    setTimeout(() => {
+        document.querySelector(".loading").style.display = "none"
+        showgif(currentgif)
+    }, 3000);
+
+    document.querySelector("#i1 .gif").addEventListener("load", function () {
         document.querySelector("#i2 .gif").src = gifurl[0]
     })
-    document.querySelector("#i2 .gif").addEventListener("load",function(){
+    document.querySelector("#i2 .gif").addEventListener("load", function () {
         document.querySelector("#i3 .gif").src = gifurl[1]
+    })
+    document.querySelector("#i3 .gif").addEventListener("load", function () {
+        document.querySelector("#i4 .gif").src = gifurl[2]
+    })
+    document.querySelector("#i4 .gif").addEventListener("load", function () {
+        document.querySelector("#i5 .gif").src = gifurl[3]
+    })
+    document.querySelector("#i5 .gif").addEventListener("load", function () {
+        document.querySelector("#i6 .gif").src = gifurl[4]
+    })
+    document.querySelector("#i6 .gif").addEventListener("load", function () {
+        document.querySelector("#i7 .gif").src = gifurl[5]
+    })
+    document.querySelector("#i7 .gif").addEventListener("load", function () {
+        document.querySelector("#i8 .gif").src = gifurl[6]
+    })
+    document.querySelector("#i8 .gif").addEventListener("load", function () {
+        document.querySelector("#i9 .gif").src = gifurl[7]
+    })
+    document.querySelector("#i9 .gif").addEventListener("load", function () {
+        document.querySelector("#i10 .gif").src = gifurl[8]
+    })
+    document.querySelector("#i10 .gif").addEventListener("load", function () {
+        document.querySelector("#i11 .gif").src = gifurl[9]
+    })
+    document.querySelector("#i11 .gif").addEventListener("load", function () {
+        document.querySelector("#i12 .gif").src = gifurl[10]
+    })
+    document.querySelector("#i12 .gif").addEventListener("load", function () {
+        document.querySelector("#i13 .gif").src = gifurl[11]
+    })
+    document.querySelector("#i13 .gif").addEventListener("load", function () {
+        document.querySelector("#i14 .gif").src = gifurl[12]
+    })
+    document.querySelector("#i14 .gif").addEventListener("load", function () {
+        document.querySelector("#i15 .gif").src = gifurl[13]
     })
     for (var i = 0; i < btnnext.length; i++) {
         btnnext[i].addEventListener("click", function () {

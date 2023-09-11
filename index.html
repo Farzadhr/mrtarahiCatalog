@@ -185,13 +185,13 @@
             .brand-name-persian {
                 color: white;
                 text-align: justify;
-                font-size: 9px;
+                font-size: 8px;
             }
 
             .brand-name-english {
                 color: white;
                 text-align: justify;
-                font-size: 4.5px;
+                font-size: 4px;
             }
 
             .vita-logo img {
@@ -252,6 +252,46 @@
                     <img src="gifs/page-3.gif" alt="" class="gif">
                 </div>
             </div>
+            <div class="gifcon" id="i4">
+                <div class="gifdiv">
+                    <img src="gifs/page-4.gif" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i5">
+                <div class="gifdiv">
+                    <img src="gifs/page-5.gif" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i6">
+                <div class="gifdiv">
+                    <img src="gifs/page-6.gif" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i7">
+                <div class="gifdiv">
+                    <img src="gifs/page-7.gif" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i8">
+                <div class="gifdiv">
+                    <img src="gifs/page-8.gif" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i9">
+                <div class="gifdiv">
+                    <img src="gifs/page-9.gif" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i10">
+                <div class="gifdiv">
+                    <img src="gifs/page-10.gif" alt="" class="gif">
+                </div>
+            </div>
+            <div class="gifcon" id="i11">
+                <div class="gifdiv">
+                    <img src="gifs/page-11.gif" alt="" class="gif">
+                </div>
+            </div>
         </div>
         <div class="prev-div">
             <i class="bi bi-chevron-left btn-prev"></i>
@@ -286,7 +326,7 @@
         btnnext[i].addEventListener("click", function () {
             currentgif += 1
             if (currentgif == totalgif + 1) {
-                currentgif = 1
+                currentgif = totalgif
             }
             showgif(currentgif)
         })

@@ -17,7 +17,7 @@
         }
 
         body,
-        p {
+        p ,i{
             margin: 0;
             padding: 0;
         }
@@ -141,7 +141,7 @@
 
         .link {
             background-color: white;
-            width: 180px;
+            width: 160px;
             border-radius: 10px;
             margin: 8px 0;
             display: flex;
@@ -159,9 +159,12 @@
 
         @media only screen and (max-width:768px) {
             .link-container {
-                display: none;
+                position: static;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
-
             .slide-container .next-div,
             .slide-container .prev-div {
                 display: none;
@@ -172,7 +175,7 @@
             }
 
             .gifdiv img {
-                width: 90%;
+                width: 98%;
             }
 
             .dordane-logo img {
@@ -182,13 +185,17 @@
             .brand-name-persian {
                 color: white;
                 text-align: justify;
-                font-size: 12px;
+                font-size: 9px;
             }
 
             .brand-name-english {
                 color: white;
                 text-align: justify;
-                font-size: 5px;
+                font-size: 4.5px;
+            }
+
+            .vita-logo img {
+                height: 18px;
             }
         }
     </style>

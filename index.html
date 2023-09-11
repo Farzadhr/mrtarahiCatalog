@@ -157,7 +157,7 @@
             color: black;
         }
 
-        @media only screen and (max-width:768px) {
+        @media only screen and (min-width:350px) {
             .link-container {
                 position: static;
                 display: flex;
@@ -196,6 +196,18 @@
 
             .vita-logo img {
                 height: 18px;
+            }
+        }
+        @media only screen and (min-width:740px){
+            .link-container {
+                position: static;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+            }
+            .link{
+                margin: 0 8px;
             }
         }
     </style>

@@ -323,7 +323,10 @@
     showgif(currentgif)
 
     document.querySelector("#i1 .gif").addEventListener("load",function(){
-        alert("hi")
+        document.querySelector("#i2 .gif").src = gifurl[0]
+    })
+    document.querySelector("#i2 .gif").addEventListener("load",function(){
+        document.querySelector("#i3 .gif").src = gifurl[1]
     })
     for (var i = 0; i < btnnext.length; i++) {
         btnnext[i].addEventListener("click", function () {
